@@ -1,6 +1,6 @@
 class debsums(
-  $packages = params_lookup( 'packages' ),
-  $enabled  = params_lookup( 'enabled' )
+  $packages = $debsums::params::packages,
+  $enabled  = $debsums::params::enabled,
   ) inherits debsums::params {
 
   $ensure = $enabled ? {
